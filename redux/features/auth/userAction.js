@@ -3,18 +3,19 @@ import axios from "axios";
 
 //action  login
 
-export const login = (email, password) => async (dispatch) => {
+export const login = (email,password) => async (dispatch) => {
     try {
         dispatch({
             type:'loginRequest'
         })
 
         const { data } = await axios.post(`${server}/user/login`, { email, password }, {
-            headers: {
-                'Content-Type': 'application/json',
-            
-            }
+        headers: {
+                'Content-Type':'application/json',
+        }
         })
+        console.log(data);
+        
         
         dispatch({
             type:'logingSuccess',
