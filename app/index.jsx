@@ -2,7 +2,6 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import {Provider} from 'react-redux'
 import Home from '../screen/Home';
 import About from '../screen/About';
 import Laptop from '../screen/Laptop';
@@ -21,8 +20,8 @@ import Notification from '../screen/account/Notification';
 import Profile from '../screen/account/Profile';
 import MyOrder from '../screen/account/MyOrder';
 import Dashbord from '../screen/admin/Dashbord';
+import {Provider} from "react-redux"
 import store from '../redux/store';
-
 const Stack = createNativeStackNavigator();
 
 const index = () => {
@@ -54,7 +53,7 @@ const index = () => {
 
       </Stack.Navigator>
       </NavigationContainer>
-   </Provider>
+      </Provider>
   )
 }
 

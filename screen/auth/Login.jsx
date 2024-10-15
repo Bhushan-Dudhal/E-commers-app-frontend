@@ -1,32 +1,48 @@
-import { Image, StatusBar, StyleSheet, Text, TextInput, View } from 'react-native'
-import React, { useState } from 'react'
+import { Image, StatusBar, StyleSheet, Text,  View } from 'react-native'
+import React, { useEffect, useState } from 'react'
 import { TouchableOpacity } from 'react-native'
 import InputBox from '../../components/Form/InputBox'
-import {useDispatch,useSelector} from 'react-redux'
 
+import {useDispatch,useSelector} from "react-redux"
+import { login } from '../../redux/features/auth/userAction'
 const Login = ({navigation}) => {
   const LoginImage = 'https://www.manjulindia.com/images/login.png';
-
   const [email,setEmail]=useState('')
   const [password, setPassword] = useState('')
-
-  const dispatch = useDispatch();
-  // global state
-
-  const loading = useReduxStateHook(navigation, "home");
   
-  //login function
+  const dispatch = useDispatch();
+
+
+  const { loading, error, message } = useSelector(state=>state.user)
+  
+ 
+  
+  
 
   const handleLogin = () => {
     if (!email || !password) {
-      return alert('Please add Email or Password')
-    } else {
-      alert("Login Successfully")
-      // console.assert('eee')
-      // console.warn("Login Successfully")
-      navigation.navigate('home')
+      return alert('please add email or password')
+    } 
+    dispatch(login(email,password))
+    // alert(message)
+    // navigation.navigate('home')
+    // alert("login success ful")
+    
+  }
+  
+  useEffect(() => {
+    if (error) {
+      alert(error)
+      dispatch({type:'clearError'})
     }
-  }  
+    
+     if (message) {
+       alert(message)
+       dispatch({ type: 'clearMessage' })
+       navigation.navigate('home')
+       
+      }
+    },[error,message,dispatch])
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor={'gray'}/>

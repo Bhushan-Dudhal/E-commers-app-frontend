@@ -1,12 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { userReducer } from './features/auth/userReducer'
+import { userReducer } from './features/auth/userReducer';
 
 
 export default configureStore({
-    reducer: {
-        user:userReducer
-    }
+  reducer:{
+    user:userReducer
+  }
 })
+// console.log(user);
+console.log(userReducer);
 
 
-export const server = 'http://192.168.137.24:9095/api';
+
+
+export const server = 'http://192.168.137.83:9095/api';
