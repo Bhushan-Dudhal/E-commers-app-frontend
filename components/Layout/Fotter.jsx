@@ -3,9 +3,14 @@ import React from 'react'
 import { TouchableOpacity } from 'react-native'
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import { useRoute,useNavigation } from '@react-navigation/native';
+import { userReduxStateHook } from '../../hook/customeHook';
+import { useDispatch } from 'react-redux';
+import { logout } from '../../redux/features/auth/userAction';
 
 
 const MenuFotter = () => {
+  const loading = userReduxStateHook(navigation, "login")
+  const dispatch =useDispatch()
 
   const routes = useRoute();
   const navigation =useNavigation()
@@ -33,7 +38,7 @@ const MenuFotter = () => {
         <Text style={[styles.iconText,routes.name ==="cart"&&styles.active]}>Cart</Text>
       </TouchableOpacity>
       
-       <TouchableOpacity style={styles.menuContainer} onPress={()=>{navigation.navigate('login'),alert("Logout Successfully")}}>
+       <TouchableOpacity style={styles.menuContainer} onPress={dispatch(logout)}>
         <AntDesign style={[styles.icon,routes.name ==="logout"&&styles.active]}  name='logout' />
         <Text style={[styles.iconText,routes.name ==="logout"&&styles.active]} >Logout</Text>
      </TouchableOpacity>

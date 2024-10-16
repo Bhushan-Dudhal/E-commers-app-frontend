@@ -5,6 +5,7 @@ import InputBox from '../../components/Form/InputBox'
 
 import {useDispatch,useSelector} from "react-redux"
 import { login } from '../../redux/features/auth/userAction'
+import { userReduxStateHook } from '../../hook/customeHook'
 const Login = ({navigation}) => {
   const LoginImage = 'https://www.manjulindia.com/images/login.png';
   const [email,setEmail]=useState('')
@@ -13,7 +14,12 @@ const Login = ({navigation}) => {
   const dispatch = useDispatch();
 
 
-  const { loading, error, message } = useSelector(state=>state.user)
+  // const { loading, error, message } = useSelector(state => state.user)
+  
+const loading=userReduxStateHook(navigation,"home")
+  
+  
+  
   
  
   
@@ -24,29 +30,28 @@ const Login = ({navigation}) => {
       return alert('please add email or password')
     } 
     dispatch(login(email,password))
-    // alert(message)
-    // navigation.navigate('home')
-    // alert("login success ful")
+   
     
   }
   
-  useEffect(() => {
-    if (error) {
-      alert(error)
-      dispatch({type:'clearError'})
-    }
+  // useEffect(() => {
+  //   if (error) {
+  //     alert(error)
+  //     dispatch({type:'clearError'})
+  //   }
     
-     if (message) {
-       alert(message)
-       dispatch({ type: 'clearMessage' })
-       navigation.navigate('home')
+  //    if (message) {
+  //      alert(message)
+  //      dispatch({ type: 'clearMessage' })
+  //      navigation.navigate('home')
        
-      }
-    },[error,message,dispatch])
+  //     }
+  //   },[error,message,dispatch])
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor={'gray'}/>
-      <Image style={styles.LoginImG} source={{uri:LoginImage}}/>
+      <Image style={styles.LoginImG} source={{ uri: LoginImage }} />
+      {loading&&<Text>Loading...</Text>}
       <InputBox placeholder={"Enter Your Email"} autoComplete={"email"}
         value={email}
         setValue={setEmail}

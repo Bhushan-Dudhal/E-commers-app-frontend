@@ -7,8 +7,6 @@ export default configureStore({
     user:userReducer
   }
 })
-// console.log(user);
-console.log(userReducer);
 
 
 
