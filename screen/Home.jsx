@@ -15,7 +15,7 @@ const Home = () => {
   
   const dispatch =useDispatch()
   useEffect(() => {
-    console.log("welcome",isAuth);
+    // console.log("welcome",isAuth);
     dispatch(getUserData())
   },[dispatch])
   return (

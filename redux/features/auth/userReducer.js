@@ -40,19 +40,19 @@ export const userReducer = createReducer({}, (builder) => {
 
 
     //logout
-    builder.addCase("logOutRequest", (state, action) => {
+    builder.addCase("logoutRequest", (state, action) => {
         state.loading = true;
-    })
-    builder.addCase("logOutSuccess", (state, action) => {
-        state.loading = false
-        state.isAuth = false
-        state.user = null
-        state.message=action.payload
-    })
-    builder.addCase("logOutFail", (state, action) => {
-        state.isAuth = false
-        state.error = action.payload
-    })
+    });
+    builder.addCase("logoutSucess", (state, action) => {
+        state.loading = false;
+        state.isAuth = false;
+        state.user = null;
+        state.message = action.payload;
+    });
+    builder.addCase("logoutFail", (state, action) => {
+        state.isAuth = false;
+        state.error = action.payload;
+    });
 
 
 })

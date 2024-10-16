@@ -9,8 +9,12 @@ import { logout } from '../../redux/features/auth/userAction';
 
 
 const MenuFotter = () => {
-  const loading = userReduxStateHook(navigation, "login")
-  const dispatch =useDispatch()
+  const loading = userReduxStateHook(navigation, path = "login")
+  console.log(loading);
+  
+  const dispatch = useDispatch()
+  console.log(dispatch);
+  
 
   const routes = useRoute();
   const navigation =useNavigation()

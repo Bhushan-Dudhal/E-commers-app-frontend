@@ -35,7 +35,7 @@ export const getUserData = () => async (dispatch) => {
             type: "getUserdataRequest"
         })
 
-        const { data } = await axios.post('http://192.168.36.1799:9095/api/user/profile')
+        const { data } = await axios.get('http://192.168.36.179:9095/api/user/profile')
         dispatch({
             type: "getUserdataSuccess",
             payload: data?.user
@@ -60,18 +60,18 @@ export const getUserData = () => async (dispatch) => {
 export const logout = () => async (dispatch) => {
     try {
         dispatch({
-            type: "logOutRequest"
-        })
-
-        const { data } = await axios.get('http://192.168.36.179:9095/api/user/logout')
+            type: "logoutRequest",
+        });
+        // hitting node login api request
+        const { data } = await axios.get(`http://192.168.36.179:9095/api/user/logoutt`);
         dispatch({
-            type: "logOutSuccess",
-            payload: data?.message
-        })
+            type: "logoutSucess",
+            payload: data?.message,
+        });
     } catch (error) {
         dispatch({
-            type: "logOutFail",
-            payload: error.response.data?.message
-        })
+            type: "logoutFail",
+            payload: error.response.data?.message,
+        });
     }
-}
+};
