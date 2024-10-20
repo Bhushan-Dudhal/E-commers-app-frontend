@@ -13,19 +13,9 @@ const Login = ({navigation}) => {
   
   const dispatch = useDispatch();
 
-
-  // const { loading, error, message } = useSelector(state => state.user)
+  const loading=userReduxStateHook(navigation,"home")
   
-const loading=userReduxStateHook(navigation,"home")
-  
-  
-  
-  
- 
-  
-  
-
-  const handleLogin = () => {
+   const handleLogin = () => {
     if (!email || !password) {
       return alert('please add email or password')
     } 
@@ -34,19 +24,7 @@ const loading=userReduxStateHook(navigation,"home")
     
   }
   
-  // useEffect(() => {
-  //   if (error) {
-  //     alert(error)
-  //     dispatch({type:'clearError'})
-  //   }
-    
-  //    if (message) {
-  //      alert(message)
-  //      dispatch({ type: 'clearMessage' })
-  //      navigation.navigate('home')
-       
-  //     }
-  //   },[error,message,dispatch])
+  
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor={'gray'}/>
