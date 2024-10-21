@@ -3,16 +3,17 @@ import React from 'react'
 import { TouchableOpacity } from 'react-native'
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import { useRoute,useNavigation } from '@react-navigation/native';
-import { useDispatch } from 'react-redux';
 import { userReduxStateHook } from '../../hook/customeHook';
-import { logout } from '../../redux/features/auth/userAction';
-
+import { useDispatch } from 'react-redux';
+import { logout } from '../../redux/features/userAction';
 
 const MenuFotter = () => {
   const routes = useRoute();
-  const navigation =useNavigation()
-  const  dispatch = useDispatch()
-   const loading = userReduxStateHook(navigation,"register");
+  const navigation = useNavigation()
+  const dispatch =useDispatch()
+  
+  const loading =userReduxStateHook(navigation,"login")
+ 
    return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.menuContainer} onPress={()=>navigation.navigate('home')}>
@@ -38,7 +39,7 @@ const MenuFotter = () => {
       </TouchableOpacity>
       
       <TouchableOpacity style={styles.menuContainer} onPress={() => {
-       dispatch(logout)
+      dispatch(logout())
       }}>
         <AntDesign style={[styles.icon,routes.name ==="logout"&&styles.active]}  name='logout' />
         <Text style={[styles.iconText,routes.name ==="logout"&&styles.active]} >Logout</Text>

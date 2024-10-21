@@ -7,14 +7,14 @@ export const userReduxStateHook = (navigation,path="login") => {
     const dispatch =useDispatch()
     useEffect(() => {
     if (error) {
-      alert(error)
+      alert(error) 
       dispatch({type:'clearError'})
     }
     
      if (message) {
        alert(message)
        dispatch({ type: 'clearMessage'})
-         navigation.reset({
+         navigation.reset({ 
              index: 0,
              routes:[{name:path}]
        })

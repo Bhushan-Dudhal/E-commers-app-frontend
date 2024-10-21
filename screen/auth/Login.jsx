@@ -2,27 +2,48 @@ import { Image, StatusBar, StyleSheet, Text,  View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { TouchableOpacity } from 'react-native'
 import InputBox from '../../components/Form/InputBox'
-
-import {useDispatch,useSelector} from "react-redux"
-import { login } from '../../redux/features/auth/userAction'
+import { useDispatch, useSelector } from "react-redux"
+import { login } from '../../redux/features/userAction'
 import { userReduxStateHook } from '../../hook/customeHook'
-const Login = ({navigation}) => {
+
+const Login = ({ navigation }) => {
+  
   const LoginImage = 'https://www.manjulindia.com/images/login.png';
   const [email,setEmail]=useState('')
   const [password, setPassword] = useState('')
   
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
+  
+  // const {loadign,error,message}=useSelector(state=>state.user)
 
-  const loading=userReduxStateHook(navigation,"home")
+ const loading = userReduxStateHook(navigation,"home")
+ 
   
    const handleLogin = () => {
     if (!email || !password) {
       return alert('please add email or password')
     } 
-    dispatch(login(email,password))
    
+     dispatch(login(email, password))
+    
+     
     
   }
+
+  // useEffect(() => {
+  //   if (error) {
+  //     alert(error)
+  //     dispatch({type:"clearError"})
+  //   }
+  //   if (message) {
+  //     alert(message)
+  //     dispatch({ type: "clearMessage" })
+  //     navigation.navigate('home')
+      
+  //  }
+
+    
+  // },[error,message,dispatch])
   
   
   return (
