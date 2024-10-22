@@ -7,7 +7,7 @@ const Product1 = () => {
   return (
       <ScrollView>
           {ProductData.map((p) => (
-              <ProductCard key={p._id} p={p } />
+              <ProductCard key={p._id} p={p} />
               
           ))}
     </ScrollView>
