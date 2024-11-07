@@ -73,6 +73,10 @@ menuContainer: {
   active: {
     color: 'blue',
     fontWeight:'900'
+  },
+  data: {
+    width: 100,
+    height:100
   }
 
 })
