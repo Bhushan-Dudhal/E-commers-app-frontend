@@ -16,4 +16,9 @@ const Product1 = () => {
 
 export default Product1
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  new: {
+    height: 100,
+    width:100
+  }
+})

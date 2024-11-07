@@ -9,4 +9,4 @@ export default configureStore({
 })
 
 
-export const server ='http://192.168.51.179:9095/api'
+export const server ='http://192.168.137.83:9095/api'
