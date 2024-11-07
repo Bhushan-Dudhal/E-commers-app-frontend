@@ -60,4 +60,9 @@ const index = () => {
 
 export default index
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  data: {
+    height: 100,
+    width:100
+  }
+})
