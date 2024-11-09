@@ -5,14 +5,19 @@ import { StyleSheet } from 'react-native'
 const Tablet = () => {
   return (
     <View>
-      <Text>Tablet</Text>
+      <Text style={styles.newText}>Tablet</Text>
       <Text style={styles.text}>Tablet</Text>
 
     </View>
   )
 }
 const styles = StyleSheet.create({
- 
+  text:{
+   
+  },
+  newText: {
+    fontSize:15
+  }
 })
 
 export default Tablet
