@@ -11,4 +11,8 @@ const Macbook = () => {
 
 export default Macbook
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  text: {
+    
+  }
+})
