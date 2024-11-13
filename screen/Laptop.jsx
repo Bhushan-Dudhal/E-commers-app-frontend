@@ -11,4 +11,8 @@ const Laptop = () => {
 
 export default Laptop
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  Text: {
+    
+  }
+})
