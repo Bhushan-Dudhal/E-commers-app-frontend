@@ -116,6 +116,9 @@ const styles = StyleSheet.create({
   BtnOtyText: {
     fontSize: 17,
     fontWeight:"500"
+  },
+  BtnA: {
+    
   }
  
 })
