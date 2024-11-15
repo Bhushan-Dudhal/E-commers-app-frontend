@@ -90,6 +90,9 @@ const styles = StyleSheet.create({
         color: "#ffffff",
         textAlign: 'center',
         fontWeight:'bold'
+    },
+    pro: {
+        
     }
 })
 export default Profile

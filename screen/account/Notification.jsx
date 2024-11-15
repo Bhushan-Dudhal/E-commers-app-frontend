@@ -23,9 +23,7 @@ const styles = StyleSheet.create({
         height: '100%',
         textAlign:'center'
   },
-  noti: {
-    
-  }
+ 
 })
 export default Notification
 
