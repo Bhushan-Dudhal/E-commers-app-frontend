@@ -21,3 +21,6 @@ const styles = StyleSheet.create({
 })
 
 export default Tablet
+const style = StyleSheet.create({
+  
+})
