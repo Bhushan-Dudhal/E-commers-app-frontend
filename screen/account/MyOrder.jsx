@@ -32,6 +32,9 @@ marginTop:10,
     fontWeight: '900',
     fontSize: 20,
     
+  },
+  data: {
+    
   }
 })
 export default MyOrder
