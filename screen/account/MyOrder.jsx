@@ -33,8 +33,6 @@ marginTop:10,
     fontSize: 20,
     
   },
-  data: {
-    
-  }
+ 
 })
 export default MyOrder
