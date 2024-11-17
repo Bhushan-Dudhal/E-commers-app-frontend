@@ -104,5 +104,8 @@ const styles = StyleSheet.create({
     marginRight: 10,
    Color:'#000000'
     
+  },
+  four: {
+    
   }
 })
