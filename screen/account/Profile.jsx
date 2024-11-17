@@ -93,6 +93,9 @@ const styles = StyleSheet.create({
     },
     pro: {
         
+    },
+    pro1: {
+        
     }
 })
 export default Profile
