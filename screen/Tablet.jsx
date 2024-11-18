@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
 export default Tablet
 const style = StyleSheet.create({
   title: {
-    
+    height: 20,
+    width:20
   }
 })
