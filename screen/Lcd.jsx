@@ -11,4 +11,9 @@ const Lcd = () => {
 
 export default Lcd
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  title: {
+    fontSize: 20,
+    
+  }
+})
