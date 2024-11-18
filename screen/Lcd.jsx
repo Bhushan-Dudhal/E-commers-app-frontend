@@ -14,6 +14,6 @@ export default Lcd
 const styles = StyleSheet.create({
   title: {
     fontSize: 20,
-    
+    color:"red"
   }
 })
