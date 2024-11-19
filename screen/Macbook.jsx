@@ -13,6 +13,7 @@ export default Macbook
 
 const styles = StyleSheet.create({
   text: {
-    height:20
+    height: 20,
+    width:20
   }
 })
