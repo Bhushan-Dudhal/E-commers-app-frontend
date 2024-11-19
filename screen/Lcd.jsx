@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     color:"red",
-    padding:10,
+    padding: 10,
+    margin:20
   }
 })
