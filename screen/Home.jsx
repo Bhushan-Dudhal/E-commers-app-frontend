@@ -33,6 +33,6 @@ export default Home
 
 const styles = StyleSheet.create({
   title: {
-   
+   fontSize:20
  }
 })
