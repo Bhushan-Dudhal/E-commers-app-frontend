@@ -15,5 +15,10 @@ export default Hedphones
 const styles = StyleSheet.create({
   title: {
     fontSize:20
+  },
+
+  two: {
+    
   }
+
 })
