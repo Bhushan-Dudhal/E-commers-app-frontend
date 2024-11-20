@@ -1,5 +1,6 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import { StyleSheet } from 'react-native'
 
 const Hedphones = () => {
   return (
@@ -10,3 +11,7 @@ const Hedphones = () => {
 }
 
 export default Hedphones
+
+const styles = StyleSheet.create({
+  
+})
