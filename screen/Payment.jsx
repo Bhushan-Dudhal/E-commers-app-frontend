@@ -18,5 +18,8 @@ const styles = StyleSheet.create({
   },
   five: {
     
+  },
+  seven: {
+    
   }
 })
