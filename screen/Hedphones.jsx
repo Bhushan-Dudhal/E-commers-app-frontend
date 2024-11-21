@@ -18,6 +18,9 @@ const styles = StyleSheet.create({
   },
 
   two: {
+    height:20
+  },
+  tree: {
     
   }
 
