@@ -5,7 +5,7 @@ import { StyleSheet } from 'react-native'
 const Hedphones = () => {
   return (
     <View>
-      <Text>Hedphones</Text>
+      <Text style={styles.container}>Hedphones</Text>
     </View>
   )
 }
@@ -13,18 +13,7 @@ const Hedphones = () => {
 export default Hedphones
 
 const styles = StyleSheet.create({
-  title: {
-    fontSize:20
-  },
-
-  two: {
-    height:20
-  },
-  tree: {
-    
-  },
-  four: {
+  container: {
     
   }
-
 })
