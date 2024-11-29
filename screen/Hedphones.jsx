@@ -14,6 +14,6 @@ export default Hedphones
 
 const styles = StyleSheet.create({
   container: {
-    
+    height:10
   }
 })
