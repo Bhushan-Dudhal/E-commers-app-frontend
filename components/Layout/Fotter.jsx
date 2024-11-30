@@ -29,7 +29,7 @@ const MenuFotter = () => {
 
        <TouchableOpacity style={styles.menuContainer} onPress={()=>navigation.navigate('account')}>
         <AntDesign style={[styles.icon,routes.name ==="account"&&styles.active]}  name='user' />
-        <Text style={[styles.iconText,routes.name ==="account"&&styles.active]}>Account</Text>
+        <Text style={[styles.iconText,routes.name ==="account"&&styles.active]}>account</Text>
      </TouchableOpacity>
 
 
